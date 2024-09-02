@@ -1,0 +1,796 @@
+/* General styles///////////////////////////////////////////////////////////// */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+}
+/* common styles /////////////////////////////////////////////////////////////////////////// */
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+body{
+    height:7000px ;
+}
+.underline{
+    height: 4px;
+    width:60px ;
+    margin:auto;
+    margin-top:15px ;
+    background-color:rgb(15, 91, 185);
+    }
+    .card{
+        width:30% ;
+        float:left ; 
+       text-align: center;
+       position: relative;
+    }
+    .parent{
+        overflow: auto;
+    }
+    .midd-card{
+        margin:0px 5% ;
+    }
+/*3.1 section HEADER /////////////////////////////////////////////////////////////////// */
+.header{
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color:rgba(5, 35, 72,0.7) ;
+    z-index: 1000;
+}
+.header img{
+    height:50px ;
+    width: 80px;
+    margin-left: 200px;
+    float: left;
+}
+.header ul{
+    list-style: none;
+    font-size:20px ;
+    margin-right: 60px;
+}
+.header ul li{
+    margin-right:20px ;
+    margin-top: 13px;
+    display: inline-block;
+    float: right;
+}
+.header ul li a{
+    color: white;
+}
+.header-link{
+    position: relative;
+}
+.header-link:after{
+    position: absolute;
+    content:"" ;
+    top:30px ;
+    left:0 ;
+    opacity:0 ;
+    height:3px ;
+    width:0;
+    background-color: rgb(54, 54, 204);
+}
+.header-link:hover::after{
+    opacity:1 ;
+    width:100%;
+    height:3px ;
+    transition:0.5s ;
+}
+.home-link:after{
+    position: absolute;
+    content:"" ;
+    top:30px ;
+    left:0 ;
+    opacity:1 ;
+    height:3px ;
+    width:100%;
+    background-color: rgb(54, 54, 204);
+}
+.header-link:hover::after{
+    opacity:1 ;
+    width:100%;
+    height:3px ;
+}
+.blog-link:before{
+position: fixed;
+content: "blog post";
+top:55px ;
+left:84% ;
+background-color: rgb(6, 70, 149);
+display: none;
+
+}
+.blog-link:hover::before{
+    transition:0.5s ;
+   display: block;
+    width:100px ;
+    height:40px ;
+    text-align: center;
+    padding-top:10px ;
+}
+.sec1{
+    height:100vh ;
+    width: 100%;
+    background-image: url(../images/Kanagawa-e1586156452710.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+.welcome-container{
+    position: relative;
+}
+.welcome-overlay{
+    background-color: rgba(0,0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    z-index: 0px;
+    height:100vh ;
+    width: 100%;
+}
+.welcome-parent{
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%) ;
+    text-align: center;
+}
+.welcome-parent h1{
+    font-size:50px ;
+    color: aliceblue;
+    text-transform:uppercase ;
+}
+.welcome-parent p{
+    font-size:25px ;
+    color:rgb(199, 183, 183) ;
+    padding:  10px 0px;
+}
+.btn-welcome{
+width:150px ;
+height:50px ;
+font-size:20px ;
+border: none;
+border-radius:5px ;
+margin-right:10px ;
+cursor: pointer;
+}
+.btn1:hover ,.btn2:hover {
+opacity:0.8;
+}
+.btn2{
+    background-color: rgb(6, 70, 149);
+    color: aliceblue;
+}
+/* 3.2 sec INFO////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.info{
+     height:100vh ; 
+     width:100vw ;
+     padding:100px 0px ;
+}
+.info-title{
+    text-align: center;
+    font-size:30px ;
+    font-weight:700px ;
+}
+.info-parent{
+   overflow: auto;
+}
+.info-line{
+margin-top:15px ;
+}
+.history-card{
+border:1px solid rgb(6, 70, 149) ;
+height:220px ;
+padding-top:30px ;
+margin-top: 70px;
+position: relative;
+}
+.history-card *{
+    position: relative;
+    z-index:2 ;
+} 
+.pictures-card{
+    margin-left: 5% ;
+    margin-right: 5%;
+}
+.history-card p{
+    padding:20px 10px ;
+}
+.history-card i{
+    font-size:25px ;
+    padding-bottom:10px ;
+}
+.history-card h2{
+    font-size:30px ;
+}
+.history-card a{
+    font-size:20px ;
+}
+.history-card a,.history-card i{
+    color: rgb(10, 96, 202);
+}
+/* AFTER HISTORY  ///////////////////////////////////////////////// */
+.history-card:after{
+    position: absolute;
+    content: "";
+    width: 0;
+    height:0 ;
+    top:0 ;
+    left:0 ;
+    background-color: black;
+    opacity: 0;
+    z-index: 1;
+}
+.history-card:hover::after{
+    opacity: 0.7;
+    transition:0.7s ;
+    width: 100%;
+    height: 100%;
+}
+.history-card *{
+    position: relative;
+    z-index:3;
+}
+.history-card:hover h2,.history-card:hover p {
+    color: aliceblue;
+}
+.history-card:hover i,.history-card:hover a{
+    color: rgb(137, 137, 184);
+}
+/* 3.3 sec FEATURED//////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.featured{
+height:140vh ;
+width: 100vw;
+}
+.featured-parent {
+    text-align: center;
+    }
+    .featured-parent h1{
+        font-size:50px ;
+        margin-top:80px ;
+    }
+    .featured-group1 {
+        padding-top:90px ;
+        }
+.featured-card{
+padding:20px ;
+}
+.overlay{
+    position: absolute;
+    top:0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    text-align: center;
+   padding-top: 110px;
+}
+.featured-img{
+    background-color: white;
+    margin: auto;
+    text-align: center;
+}
+.featured-img img {
+    width:300px ;
+    height: 300px;
+}
+.featured-card:hover .overlay{
+visibility: visible;
+}
+.overlay h2{
+    font-size: 30px;
+    color:rgb(76, 130, 196);
+}
+.overlay p{
+    font-size:25px ;
+    color: aliceblue;
+}
+.overlay i{
+    font-size: 25px;
+    background-color:rgb(75, 142, 224) ;
+    width:40px ;
+    height:40px ;
+    line-height:40px ;
+    color: aliceblue;
+    border:1px solid  rgb(75, 142, 224);
+}
+.featured-group2 {
+    padding-top:390px ;
+}
+/*3.4 sec OFFER////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.offer{
+    height:100vh;
+    width:100vw ;
+}
+.offer-parent h1{
+    text-align: center;
+    font-size:40px ;
+    padding-top:100px ;
+}
+.offer-group1{
+    padding-top:150px ;
+}
+.offer-card {
+width:30% ;
+float: left;
+height:200px ;
+border:2px solid rgb(94, 91, 91) ;
+overflow: auto;
+position: relative;
+}
+.offer-group2{
+    padding-top:220px ;
+}
+.offer-icon{
+float: left;
+padding:30px 20px ;
+width:20% ;
+}
+.offer-icon i{
+    font-size:40px ;
+    color:rgb(15, 85, 170);
+}
+.offer-text{
+float: left;
+padding:30px 10px ;
+width:70% ;
+}
+.offer-text h2{
+    font-size:30px ;
+}
+.offer-text p{
+    font-size:17px ;
+   padding-top:20px ;
+   color:rgb(141, 138, 138) ;
+}
+/* AFTER  OFFER/////////////////////////////////////////////// */
+.offer-card:after{
+    position: absolute;
+    content:"" ;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    z-index: 1;
+}
+.offer-card:hover::after{
+    transition:0.7s ;
+    width:100% ;
+    height:100% ;
+    opacity:1 ;
+}
+.offer-card:hover h2{
+    color:rgb(118, 158, 208) ;
+}
+.offer-card *{
+    position: relative;
+    z-index:2;
+}
+/*3.5 Sec BENEFIT///////////////////////////////////////////////////////////////////////////////////////// */
+.benefit{
+    height: 100vh;
+    width: 100vw;
+    padding-top:100px ;
+    margin-top:50px ;
+}
+.benefit-card{
+ overflow: auto;
+}
+.benefit-text{
+float: left;
+width:45% ;
+margin-right: 15%;
+}
+.benefit-image{
+float: left;
+width:25%;
+}
+.benefit-image img{
+    width:450px ;
+    height:500px ;
+}
+.benefit-text h1{
+    font-size:40px ;
+}
+.benefit-text p{
+    font-size:20px ;
+}
+.line4{
+    height:4px ;
+    background-color:rgb(8, 83, 174)  ;
+    width:60px ;
+    margin:5px  40px;
+}
+.mainpar{
+padding-top:25px ;
+}
+.benefit-mark{
+    padding-top:20px ;
+    overflow: auto;
+}
+.benefit-mark p{
+    padding-top:10px ;
+}
+.benefit-mark i{
+    background-color: black;
+    color:blue ;
+    border-radius:50% ;
+border:1px solid black ;
+}
+.benefit-image .list{
+  display: inline-block;
+  padding-left:15px ;
+  font-size:30px ;
+ color: rgb(104, 104, 113);
+}
+.benefit-image .bluelist,.list:hover {
+    color: blue;
+}
+.benefit-image ul{
+    margin-left:250px ;
+}
+/* 3.6 sec SURVEY///////////////////////////////////////////////////////////////////////////////////////// */
+.survey{
+    width:100vw ;
+    height:50vh ;
+    background-image: url(../images/blue-art-background-nt2cgz6tfay4xcc4.jpg);
+    background-repeat: no-repeat;
+    background-size:cover ;
+    position: relative;
+    background-attachment: fixed;
+}
+.survey-parent{
+    position: absolute;
+    top:50% ;
+    left:50% ;
+    transform: translate(-50%,-50%);
+    width: 90%;
+}
+.survey-overlay{
+    position: absolute;
+    top:0 ;
+    left:0 ;
+    background-color:rgba(0, 0, 0, 0.7) ;
+    height:100% ;
+    width:100%;   
+}
+.survey-item{
+    float: left;
+    width:20%;
+    text-align: center;
+}
+.survey-item i{
+    font-size:50px ;
+    color: rgb(87, 87, 167);
+}
+.survey-item p{
+font-size:20px ;
+color: aliceblue;
+}
+#survey-num{
+    font-size:40px ;
+    padding-top:10px ;
+}
+.survey-midd1{
+     margin-left:6% ;
+}
+.survey-midd2{
+    margin: 0px 6% ;
+}
+.survey-item *{
+    position:relative;
+    z-index:2 ;
+}
+/* 3.7 Sec PRICE/////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.price{
+height:100vh ;
+width:100vw ;
+padding-top:50px ;
+}
+.price-card{
+height:400px;
+border:2px solid rgb(110, 101, 101) ;
+padding-top:50px ;
+}
+.price-p {
+   padding-top:10px ;
+}
+.price-circle{
+    border:2px solid blue ;
+    width: 100px;
+    height:100px ;
+    border-radius:50% ;
+   margin:20px auto ;
+}
+.price-circle h2{
+   margin-top:30px ;
+   font-size:30px ;
+}
+.price-circle h2 , .price-card p{
+    color: rgb(110, 101, 101);
+}
+.price-card p{
+    font-size:20px ;
+}
+.price-btn{
+margin-top:20px ;
+width:120px ;
+height:25px ;
+background-color: aliceblue;
+border:2px solid blue ;
+}
+.price-h1{
+text-align: center;
+}
+.price-line{
+    margin-top:30px ;
+    margin-bottom: 20px;
+}
+/*AFTER PRICE///////////////////////////////////////////// */
+.price-card:after{
+    position: absolute;
+    content: "";
+    top:0;
+    left:0;
+    width:100% ;
+    height:0 ;
+    background-color:rgba(0,0,0, 0.5) ;
+    opacity:0 ;
+    z-index:1 ;
+    transition:0.7s ;
+}
+.price-card:hover::after{
+    opacity:1 ;
+    width:100% ;
+    height:100% ;
+}
+.price-card:hover .price-firpar{
+    color: rgb(9, 9, 137);
+}
+.price-firpar{
+    position: relative;
+    z-index:2 ;
+}
+/* 3.8 SEC DEVELOPER////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.developer{
+    width:100vw ;
+    height:50vh ;
+    background-image:url(../images/mountain-7868724_1280.webp) ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover ;
+    position: relative;
+}
+.developer-overlay{
+    position: absolute;
+    width:100% ;
+    height:100% ;
+    background-color:rgba(0, 0, 0, 0.5) ;
+}
+.developer-container{
+    overflow: auto;
+    width:70% ;
+    position: absolute;
+    top: 50%;
+    left:50% ;
+    transform: translate(-50%,-50%);
+  
+}
+.developer-img, .developer-name{
+float: left;
+}
+.developer-item{
+    width:40% ;
+    height:150px ;
+    float: left;
+}
+.deve-item2{
+margin-left:20% ;
+}
+.developer-discrip{
+    padding-top:80px ;
+}
+.developer-name{
+padding:10px ;
+}
+.developer-img img{
+    width:60px ;
+    height:60px ;
+    border-radius:50% ;
+}
+.developer-name h2,.developer-discrip{
+    color: aliceblue;
+}
+.developer-name p{
+    color: rgb(72, 133, 206);
+}
+/* 3.9 SEC TEAM///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.team-container h1{
+    text-align: center;
+    font-size:40px ;
+    margin-top:150px ;
+}
+.team-line{
+    margin-bottom:60px ;
+}
+.team-card{
+    height:300px ;
+    border:2px solid rgb(10, 96, 202) ;
+    padding:18px 30px ;
+}
+.team-img{
+    position: relative;
+}
+.team-img img{
+    width:100% ;
+}
+.team-overlay{
+    position: absolute;
+    top:0 ;
+    left: 0;
+    width:100% ;
+    height:100% ;
+    background-color: rgba(0, 0, 0, 0.5);
+   visibility: hidden;
+}
+.team-card:hover .team-overlay {
+visibility: visible;
+}
+.team-info{
+    padding-top:20px ;
+    font-size:20px ;
+}
+.team-overlay a{
+    height:40px ;
+    display: block;
+    background-color: rgb(29, 98, 182);
+    color: aliceblue;
+    width:40px ;
+    margin-left:auto ;
+}
+.team-overlay a i{
+    line-height:40px ;
+}
+ .team-card:hover .team-par1{
+color: grey;
+}
+.team-card:hover .team-par2{
+color: rgb(21, 96, 188);
+}
+/* after TEAM////////////////////////////////////////////////// */
+.team-card:after{
+    position: absolute;
+    content:"" ;
+    top:0 ;
+    left:0 ;
+    width:100% ;
+    height:0 ;
+    opacity:0 ;
+    background-color:rgba(0, 0, 0, 0.5) ;
+}
+.team-card:hover::after{
+    opacity:0.5 ;
+    transition:0.7s ;
+    width:100% ;
+    height:100% ;
+}
+/* 3.10 SEC RECENT////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.recent{
+width:100vw ;
+height:100vh ;
+}
+.recent-icon{
+overflow: auto;
+}
+.recent-card{
+    width:30% ;
+    height:550px ;
+    float: left;
+    border:2px solid rgb(10, 96, 202) ;
+    padding:18px 20px ;
+    position: relative;
+}
+.recent-par-midd{
+    margin:0px 5% ;
+}
+.recent-card img{
+    width:200px ;
+    height:260px ;
+}
+.recent-icon{
+    font-size:15px ;
+    padding-top:20px ;
+}
+.recent-icon p{
+    float: left;
+}
+.recent-artist,.recent-discrip{
+    padding-top:15px ;
+    padding-bottom:15px ;
+}
+.recent-link{
+    padding-top:15px ;
+    font-size:17px ;
+}
+.recent-par i,.recent-link{
+    color: rgb(47, 36, 173);
+}
+.recent-par {
+    font-size:13px ;
+}
+.recent-discrip{
+    color: rgb(19, 23, 27);
+}
+.recent-container h1{
+text-align: center;
+margin-top:150px ;
+}
+.recent-line{
+    margin-bottom: 70px;
+}
+.recent-card:after{
+    position: absolute;
+    content:"" ;
+    top:0 ;
+    left:0 ;
+    width:100% ;
+    height:0 ;
+    opacity:0 ;
+    background-color: rgba(0, 0,0, 0.7);
+}
+.recent-card:hover::after{
+    transition:0.7s ;
+    width:100% ;
+    height:100% ;
+    opacity:0.5 ;
+}
+/*  footer///////////////////////////////////////////////////////////////////////////////////////////// */
+.footer{
+    background-color:rgb(5, 35, 72)  ;
+    height:40vh ;
+    width:100vw ;
+    text-align: center;
+    position: relative;
+}
+.footer-content{
+    position: absolute;
+    top:50% ;
+    left:50% ;
+    transform:translate(-50%,-50%) ;
+}
+.footer img{
+    width:150px ;
+    height:70px ;
+}
+.footer-icon a i{
+    background-color: rgb(64, 64, 159);
+    width:50px ;
+    height:50px ;
+    border-radius:50% ;
+    font-size:30px ;
+    color: aliceblue;
+    line-height: 50px;
+}
+.footer-icon ,.footer-par{
+    padding-top:15px ;
+}
+.footer-par{
+    color: rgb(167, 177, 185);
+    font-size:15px ;
+}
+.footer-icon a i:hover{
+background-color: blue;
+}
+/* /////////////////////////////////////////////////////////////////////////////////////// */
